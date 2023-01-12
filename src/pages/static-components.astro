@@ -1,10 +1,11 @@
 ---
 import MyReactComponent from '../components/MyReactComponent.jsx';
+const special = "are U sure?";
 ---
 
 <html>
   <body>
     <h1>Use React components directly in Astro!</h1>
-    <MyReactComponent />
+    <MyReactComponent passing={'sss'} client:load  />
   </body>
 </html>

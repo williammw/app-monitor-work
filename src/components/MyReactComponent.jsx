@@ -1,9 +1,9 @@
 
 import React, {useEffect, useState} from 'react'
 import './style.css'
-function MyReactComponent() {
+function MyReactComponent({initial}) {
   const [data, setData] = useState(null)
-  
+   
   useEffect(() => { 
     console.log("useEffect")
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -18,13 +18,14 @@ function MyReactComponent() {
 
   return (
     <div>
-      {    console.log(data)}
+      
       <div>MyReactComponent</div>
       <div className="miji">
         {data && data.map((item, index) => (
           <div key={index}>
             <div>{item.name}</div>
             <div>{item.username}</div>
+            <div>{initial}</div>
           </div>
         ))}
       </div>

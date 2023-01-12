@@ -4,14 +4,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "cross-env RUNNING_MODE=development astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "astro": "^1.9.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@astrojs/react": "^1.2.2",
