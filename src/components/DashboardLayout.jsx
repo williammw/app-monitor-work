@@ -7,7 +7,13 @@ function DashboardLayout() {
       <div className="flex">
         <nav className="w-64 bg-white">
           {/* Left navigation goes here */}
-          left
+          <p>ha</p>
+          <p>ha</p>
+          <p>ha</p>
+          <p>ha</p>
+          <p>ha</p>
+          <p>ha</p>
+          
         </nav>
         <main className="flex-1 p-4">
           {/* Main content goes here */}
