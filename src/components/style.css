@@ -1,1 +1,41 @@
 .miji{color:red;}
+/* Add this styles to your css file */
+
+.left-nav {
+  width: 200px; /* adjust width to match the design */
+  height: 100%; /* adjust height to match the design */
+  background-color: #f4f4f4; /* adjust background color to match the design */
+  position: fixed; /* make the navigation always visible */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1; /* make sure the navigation is on top of other elements */
+}
+
+.left-nav ul {
+  list-style: none; /* remove bullet points */
+  padding: 0; /* remove default padding */
+  margin: 0; /* remove default margin */
+}
+
+.left-nav li {
+  margin: 10px 0; /* add some space between the links */
+}
+
+.left-nav a {
+  display: block; /* make the link take up the full width of the list item */
+  padding: 10px 20px; /* add some padding to the link */
+  text-decoration: none; /* remove underline from the link */
+  color: #333; /* adjust text color to match the design */
+}
+
+.left-nav a:hover {
+  background-color: #eee; /* change the background color when the link is hovered over */
+}
+
+
+.main-content {
+    margin-left:200px; /* adjust margin-left to match the width of the LeftNav component */
+    padding: 20px; /* add some padding to the main content */
+    overflow:auto; /* add scrollbar when the content overflow */
+}
