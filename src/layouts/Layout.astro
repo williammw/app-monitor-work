@@ -1,52 +1,64 @@
 ---
+import Icon from "../components/Icon";
+
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class='bg-gray-50'>
-	<div class='max-w-screen-xl mx-auto bg-gray-50'>
-		<div class='max-w-screen-xl mx-auto'>
-<header class="fixed top-0 z-10 bg-gray-900 flex px-4 py-2 items-center justify-between w-[1280px]">
-      <h1 class="text-lg text-white font-medium">Site (dev)</h1>
-      <div class="flex items-center">
-        <a href="#" class="text-white mr-4">Home</a>
-        <a href="#" class="text-white mr-4">Popular</a>
-        <a href="#" class="text-white">New</a>
-      </div>
-    </header>
-		</div>
-    
-		
-		
-  
-		<slot />
-		</div>
-	</body>
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50">
+    <div class="max-w-screen-xl mx-auto bg-gray-50">
+      <div class="max-w-screen-xl mx-auto">
+        <header
+          class="fixed top-0 z-10 bg-gray-900 flex px-4 py-2 items-center justify-between w-[1280px]"
+        >
+          <div class="sm:block hidden">
+            <Icon />
+          </div>
 
+          <h1 class="text-lg text-white font-medium">MonitorApp (dev)</h1>
+          <div class="flex items-center">
+            <a href="#" class="text-white mr-4">Home</a>
+            <a href="#" class="text-white mr-4">Popular</a>
+            <a href="#" class="text-white">New</a>
+          </div>
+        </header>
+      </div>
+
+      <div class="flex h-screen pt-[45px]">
+        {/* Left navigation goes here */}
+        <nav class="hidden w-64 overflow-y-auto position-sticky top-0 sm:block">
+          {
+            [...Array(100)].map((_, i) => (
+              <ul class="bg-gray-200 pl-3  hover:bg-gray-300">
+                <li class="border-b-[0.5px] border-gray-700 ">
+                  <a href="#" class="block p-3 text-gray-800 ">
+                    Item {i + 1}
+                  </a>
+                </li>
+              </ul>
+            ))
+          }
+        </nav>
+        <slot />
+      </div>
+    </div>
+  </body>
 </html>
-<!-- <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style> -->
+
+<style>
+  .html {
+    overflow-y: hidden;
+  }
+</style>
