@@ -1,5 +1,6 @@
 ---
 import Icon from "../components/Icon";
+import MuiDrawer from "../components/MuiDrawer";
 
 export interface Props {
   title: string;
@@ -23,10 +24,10 @@ const { title } = Astro.props;
         <header
           class="fixed top-0 z-10 bg-gray-900 flex px-4 py-2 items-center justify-between w-[1280px]"
         >
-          <div class="sm:block hidden">
-            <Icon />
+          <div class="block sm:hidden">
+            <MuiDrawer client:load />
+            <!-- <Icon /> -->
           </div>
-
           <h1 class="text-lg text-white font-medium">MonitorApp (dev)</h1>
           <div class="flex items-center">
             <a href="#" class="text-white mr-4">Home</a>
