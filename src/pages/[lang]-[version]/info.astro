@@ -1,4 +1,6 @@
 ---
+import Layout from "../../layouts/Layout.astro";
+
 export function getStaticPaths() {
   return [
     { params: { lang: "en", version: "v1" } },
@@ -9,5 +11,7 @@ export function getStaticPaths() {
 const { lang, version } = Astro.params;
 ---
 
-<h1>{lang}</h1>
-<h2>{version}</h2>
+<Layout title="info">
+  <h1>{lang}</h1>
+  <h2>{version}</h2>
+</Layout>

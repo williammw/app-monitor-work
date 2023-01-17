@@ -78,6 +78,7 @@ export default function MuiDrawer() {
           </Drawer>
         </React.Fragment>
       ))}
+      <a href="/en-v1/info">Info</a>
     </div>
   );
 }
