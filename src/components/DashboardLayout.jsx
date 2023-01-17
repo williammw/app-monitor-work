@@ -4,7 +4,7 @@ function DashboardLayout() {
   return (
     <div className="h-screen flex pt-[45px] ">
       {/* Left navigation goes here */}
-      <nav className="w-64 overflow-y-auto position-sticky top-0">
+      <nav className="w-64 overflow-y-auto position-sticky top-0 hidden sm:block">
         {[...Array(100)].map((_, i) => (
           <ul className="bg-gray-200 pl-3  hover:bg-gray-300">
             <li className="border-b-[0.5px] border-gray-700 ">
@@ -17,24 +17,11 @@ function DashboardLayout() {
       </nav>
       <main className="flex-1 overflow-y-auto transform translate-y-50 ">
         {/* Main content goes here */}
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
-        <div className="text-xl">hello</div>
+        {[...Array(100)].map((_, i) => (
+          <div key={i} className="text-xl">
+            hello
+          </div>
+        ))}
       </main>
     </div>
   );
