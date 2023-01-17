@@ -1,18 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Chart from '../components/Chart.astro';
-import MyReactComponent from '../components/MyReactComponent';
-import '../styles/base.css'
-import DashboardLayout from '../components/DashboardLayout';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Chart from "../components/Chart.astro";
+import MyReactComponent from "../components/MyReactComponent";
+import "../styles/base.css";
+import DashboardLayout from "../components/DashboardLayout.astro";
 // import.meta.env.dev.NAME
-const happy = import.meta.env.VITE_HAPPY
+const happy = import.meta.env.VITE_HAPPY;
 // console.log(happy)
 ---
 
 <Layout title="Welcome to Astro.">
-	<DashboardLayout  client:load/>
+  <DashboardLayout />
 </Layout>
-
-<style>
-</style>
