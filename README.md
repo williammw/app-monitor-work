@@ -1,1 +1,1 @@
-# traditional forum with header, leftnav and main content
+# middle long list, click to open
