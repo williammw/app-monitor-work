@@ -1,4 +1,4 @@
-# traditional forum with header, leftnav and main content
+# social media layout
 
-# search icon
+# search icon 
 https://mui.com/material-ui/material-icons/?query=Mail
